@@ -1,4 +1,4 @@
-package org.daas;
+package com.daas;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 

@@ -1,4 +1,4 @@
-package org.daas;
+package com.daas;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
