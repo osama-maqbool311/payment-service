@@ -13,7 +13,7 @@ quarkus:
     database:
       generation: none
     log:
-      sql: true
+      sql: false
 
   flyway:
     migrate-at-start: true
@@ -22,13 +22,15 @@ quarkus:
 
 
   http:
-    port: 8081
+    port: 8085
 
 
   log:
     console:
-      color: true
       enable: true
+      color: true
+      format: "%d{yyyy-MM-dd HH:mm:ss} %-5p [request.id=%X{request.id}] [method=%X{request.method}] [path=%X{request.path}] [query=%X{request.query}] [ip=%X{remote.addr}] [user-agent=%X{user.agent}] [%c{2.}] (%t) %s%n"
+    level: INFO
 
   quartz:
     jdbc:

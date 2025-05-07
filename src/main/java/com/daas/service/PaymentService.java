@@ -10,9 +10,13 @@ import com.daas.entity.Payment;
 import com.daas.repository.PaymentRepository;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @ApplicationScoped
 public class PaymentService {
+
+    private static final Logger log = LoggerFactory.getLogger(PaymentService.class);
 
     @Inject
     PaymentRepository paymentRepository;
@@ -23,6 +27,7 @@ public class PaymentService {
 
     @Transactional
     public Payment createPayment(final PaymentRequest paymentRequest) {
+        log.info("Creating payment");
         Payment payment = paymentTranslator.toEntity(paymentRequest);
         paymentRepository.persist(payment);
         return payment;
