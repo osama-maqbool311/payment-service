@@ -17,6 +17,7 @@ public class PaymentController {
     private final PaymentService paymentService;
 
     @POST
+    @Produces(MediaType.APPLICATION_JSON)
     public Response createPayment(final PaymentRequest paymentRequest) {
         return Response.ok(paymentService.createPayment(paymentRequest)).build();
     }
