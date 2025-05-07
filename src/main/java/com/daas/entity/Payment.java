@@ -22,7 +22,6 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    /** The booking this payment refers to (no FK constraint) */
     @Column(name = "booking_id", nullable = false)
     public Long bookingId;
 

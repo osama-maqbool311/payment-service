@@ -22,7 +22,7 @@ quarkus:
 
 
   http:
-    port: 9090
+    port: 8081
 
 
   log:
