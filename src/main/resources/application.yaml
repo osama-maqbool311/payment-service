@@ -39,3 +39,9 @@ quarkus:
     misfire-policy:
       task-job: ignore-misfire-policy
 
+  stork:
+    my-service:
+      service-discovery:
+        type: consul
+        consul-host: localhost
+        consul-port: 8500
