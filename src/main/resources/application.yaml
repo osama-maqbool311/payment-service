@@ -1,12 +1,12 @@
 quarkus:
 
   datasource:
-    db-kind: h2
+    db-kind: postgresql
+    username: postgres
+    password: postgres
     jdbc:
-      url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
-      driver: org.h2.Driver
-    username: sa
-    password: sa
+      url: jdbc:postgresql://localhost:5432/payment_db
+      driver: org.postgresql.Driver
 
 
   hibernate-orm:
