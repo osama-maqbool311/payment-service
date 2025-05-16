@@ -14,7 +14,7 @@ public class PaymentService {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "DAAS :: Payment Service → Payment successfully processed.";
+        return "DAAS :: Payment Service Payment successfully processed.";
 
     }
 
